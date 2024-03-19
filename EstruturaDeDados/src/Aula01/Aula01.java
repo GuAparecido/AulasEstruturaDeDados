@@ -25,6 +25,8 @@ public class Aula01 {
 
         System.out.println("A soma dos números é: "+ (num + num2) + "!!!!!!!!!");
 
+        // Testando outro commit
+
 
     }
 
