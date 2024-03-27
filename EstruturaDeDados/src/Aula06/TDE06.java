@@ -18,6 +18,7 @@ public class TDE06 {
         Aluno aluno1 = new Aluno("Gustavo", new Date(100, 10, 10), materias);
         Aluno aluno2 = new Aluno("Otavio", new Date(104, 10, 10), materias);
         Aluno aluno3 = new Aluno("Léo Lins", new Date(104, 10, 10), materias);
+        Aluno aluno4 = new Aluno(); // Utilizando o aluno com construtor vazio
 
         System.out.println(aluno1.mostrarMaterias());
 

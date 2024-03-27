@@ -4,6 +4,7 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Aluno {
@@ -62,7 +63,17 @@ public class Aluno {
         this.materias.remove(materia);
     }
 
+    // Utilizando o método equals para comparar objetos
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Aluno aluno = (Aluno) o;
+        return Objects.equals(nome, aluno.nome);
+    }
 
-
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome);
+    }
 }
