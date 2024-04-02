@@ -2,6 +2,7 @@ package Aula06;
 
 
 import java.text.DateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -15,9 +16,9 @@ public class TDE06 {
         materias.add("Português");
         materias.add("Física");
 
-        Aluno aluno1 = new Aluno("Gustavo", new Date(100, 10, 10), materias);
-        Aluno aluno2 = new Aluno("Otavio", new Date(104, 10, 10), materias);
-        Aluno aluno3 = new Aluno("Léo Lins", new Date(104, 10, 10), materias);
+        Aluno aluno1 = new Aluno("Gustavo", LocalDate.of(2200, 10, 10), materias);
+        Aluno aluno2 = new Aluno("Otavio", LocalDate.of(2004, 10, 10), materias);
+        Aluno aluno3 = new Aluno("Léo Lins", LocalDate.of(2004, 10, 10), materias);
         Aluno aluno4 = new Aluno(); // Utilizando o aluno com construtor vazio
 
         System.out.println(aluno1.mostrarMaterias());

@@ -2,6 +2,7 @@ package Aula06;
 
 import org.w3c.dom.ls.LSOutput;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -11,14 +12,14 @@ public class Aluno {
     Scanner scanner = new Scanner(System.in);
     // Atributos
     private String nome;
-    private Date dataNascimento;
+    private LocalDate dataNascimento;
     private List<String> materias;
 
     // Construtor
     public Aluno() {
     }
 
-    public Aluno(String nome, Date dataNascimento, List<String> materias) {
+    public Aluno(String nome, LocalDate dataNascimento, List<String> materias) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.materias = materias;
@@ -33,11 +34,11 @@ public class Aluno {
         this.nome = nome;
     }
 
-    public Date getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -76,4 +77,15 @@ public class Aluno {
     public int hashCode() {
         return Objects.hash(nome);
     }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + nome + '\'' +
+                ", dataNascimento=" + dataNascimento +
+                '}';
+    }
 }
+
+
+
