@@ -39,8 +39,6 @@ public class TDE09 {
         contagem.offer(9);
         contagem.offer(10);
 
-        int sizeNovaContagem = contagem.size();
-
         System.out.println("Insira o valor que deseja consultar na lista: ");
         int valor = Integer.parseInt(scanner.nextLine());
 
@@ -53,11 +51,46 @@ public class TDE09 {
         /* Exercício 3: Filtrar Elementos Escreva um programa Java que utilize uma LinkedList como uma Queue.
         Adicione alguns números na fila e remova todos os elementos mantendo (em uma outra lista, se precisar)
         os números maiores que 5. Imprima a fila resultante.*/
+        Queue<Integer> filaInteiros = new LinkedList<>();
+        filaInteiros.offer(4);
+        filaInteiros.offer(7);
+        filaInteiros.offer(3);
+        filaInteiros.offer(9);
+        filaInteiros.offer(8);
 
+        Queue<Integer> filaMaiores = new LinkedList<>();
+        while (!filaInteiros.isEmpty()) {
+            Integer element = filaInteiros.poll();
+            if (element > 5) {
+                filaMaiores.offer(element);
+            }
+        }
+
+        System.out.println("Printando os números maiores " + filaMaiores);
 
         /* Exercício 4: Esvaziar a Fila Crie um programa Java que utilize uma LinkedList como uma Queue.
         Adicione alguns elementos na fila e, em seguida, remova todos os elementos da fila até que ela
         esteja vazia. Imprima a fila a cada remoção.*/
+        Queue<Integer> numeros = new LinkedList<>();
+        numeros.offer(1);
+        numeros.offer(2);
+        numeros.offer(3);
+
+        int sizeNumeros = numeros.size();
+//        Não funciona dessa forma, o poll sempre atualiza o tamanho da lista
+//        for (String elemento : fila) {
+//            System.out.println(fila.poll());
+//        }
+
+        // Utilizando For
+        for (int i = 0; i < sizeNumeros; i++) {
+            System.out.println("Removendo... " + numeros.poll());
+        }
+
+        // Utilizando While
+        while (!numeros.isEmpty()) {
+            System.out.println("Removendo... " + numeros.poll());
+        }
 
     }
 }
