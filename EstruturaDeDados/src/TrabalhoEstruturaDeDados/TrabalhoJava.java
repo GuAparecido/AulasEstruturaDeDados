@@ -205,6 +205,8 @@ public class TrabalhoJava {
 //        No método main, crie uma Stack de objetos Aluno. Adicione pelo menos dois alunos à pilha.
 //        Em seguida, implemente um algoritmo que remova e imprima o nome do último aluno na pilha.
         Stack<Aluno> pilha = new Stack<>();
+
+//      Método 1.
         Aluno aluno19 = new Aluno("Pilha1", LocalDate.of(2009, 1, 4), 19);
         Aluno aluno20 = new Aluno("Pilha2", LocalDate.of(2009, 1, 20), 20);
         Aluno aluno21 = new Aluno("Pilha3", LocalDate.of(2009, 1, 20), 21);
@@ -215,6 +217,11 @@ public class TrabalhoJava {
         pilha.push(aluno21);
         pilha.push(aluno22);
 
+        Aluno pilhaEx10 = pilha.pop();
+
+        System.out.println(pilhaEx10.getNome() );
+
+//        Método 2
         while (!pilha.isEmpty()) {
             Aluno element = pilha.pop();
             if (pilha.isEmpty()) {
